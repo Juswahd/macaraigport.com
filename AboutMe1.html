@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(https://i.pinimg.com/736x/a7/3e/a7/a73ea7c6630f0992fea7975848f9ab3b.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            color: #FFF5E1; /* Light cream text color */
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: #4f2715; /* SaddleBrown */
+            color: orange; /* Light cream */
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: orange; /* Light cream */
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #8f0909; /* Bright orange */
+        }
+
+        /* About Section */
+        .about {
+            max-width: 900px;
+            margin: 50px auto;
+            text-align: center;
+            background: #693713; /* Darker SaddleBrown for the card */
+            padding: 20px;
+            box-shadow: 0 5px 10px rgba(165, 118, 31, 0.785);
+            border-radius: 10px;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px;
+            border: 4px solid #FFA500; /* Bright orange border */
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about h1 {
+            margin-bottom: 10px;
+            font-size: 30px;
+            color: #FFF5E1; /* Light cream */
+        }
+
+        .about h2 {
+            font-size: 25px;
+            margin-bottom: 20px;
+            color: #b0b0b0; /* Bright orange */
+        }
+
+
+        /* Footer Styles */
+        footer { 
+            padding: 50px;
+            text-align: center;
+            font-family: 'Arimo', sans-serif;
+            color: #fbfbfb;
+            font-size: 13px;
+            text-shadow: 2px 5px 10px rgba(183, 183, 183, 0.726);
+            line-height: 230%;
+        }
+
+        /* Animation for text roles */
+        .text-animation {
+            font-size: 20px;
+            color: #FFA500; /* Bright orange */
+            font-weight: bold;
+            height: 30px; /* Adjust based on text height */
+            overflow: hidden;
+            position: relative;
+        }
+
+        .text-animation span {
+            display: block;
+            position: absolute;
+            width: 100%;
+            animation: slide 8s infinite;
+        }
+
+        /* Keyframes */
+        @keyframes slide {
+            0% { transform: translateY(0); }
+            25% { transform: translateY(-30px); }
+            50% { transform: translateY(-60px); }
+            75% { transform: translateY(-90px); }
+            100% { transform: translateY(0); }
+        }
+
+        /* Ensure all roles are stacked */
+        .text-animation span:nth-child(1) {
+            top: 0;
+        }
+
+        .text-animation span:nth-child(2) {
+            top: 30px;
+        }
+
+        .text-animation span:nth-child(3) {
+            top: 60px;
+        }
+
+        .text-animation span:nth-child(4) {
+            top: 90px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) { /* Tablets and smaller laptops */
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .about {
+                margin: 30px 20px;
+                padding: 15px;
+            }
+
+            .about h1 {
+                font-size: 26px;
+            }
+
+            .about h2 {
+                font-size: 22px;
+            }
+
+            footer {
+                padding-top:14%;
+            }
+        }
+
+
+        @media (max-width: 768px) { /* Phones and smaller tablets */
+            header {
+                padding: 10px 15px;
+            }
+
+            .logo {
+                font-size: 20px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .about {
+                margin: 20px 10px;
+                padding: 10px;
+            }
+
+            .about h1 {
+                font-size: 24px;
+            }
+
+            .about h2 {
+                font-size: 20px;
+            }
+
+            .text-animation {
+                font-size: 18px;
+            }
+
+            .profile-image {
+                width: 120px;
+                height: 120px;
+            }
+
+            footer {
+                padding-top: 8%;
+            }
+        }
+
+        @media (max-width: 480px) { /* Smaller phones */
+            header {
+                padding: 8px 10px;
+            }
+
+            .logo {
+                font-size: 18px;
+            }
+
+            nav ul {
+                gap: 5px;
+            }
+
+            .about {
+                margin: 15px 5px;
+            }
+
+            .about h1 {
+                font-size: 20px;
+            }
+
+            .about h2 {
+                font-size: 18px;
+            }
+
+            .text-animation {
+                font-size: 16px;
+            }
+
+            .profile-image {
+                width: 100px;
+                height: 100px;
+            }
+
+            footer {
+                padding-top: 4%;
+            }
+        }
+</style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Hiroyuki Draw</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="AboutMe1.html">About</a></li>
+                <li><a href="works2.html">Works</a></li>
+                <li><a href="Services1.html">Services</a></li>
+                <li><a href="contact.html">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="about">
+        <div class="profile-image">
+            <img src="https://scontent.fmnl17-6.fna.fbcdn.net/v/t39.30808-6/468147115_595938732834510_1303687466206891907_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeFSOllNEozEGLTuYp4Q6rFDXbqeiTabBaBdup6JNpsFoKLqUptGT2QcRo_EapiNRMoq40fcrAHVlwmkEguYMiET&_nc_ohc=rShZB_Mwn_sQ7kNvgEWFLNW&_nc_zt=23&_nc_ht=scontent.fmnl17-6.fna&_nc_gid=A6k7PUDxVJhsAXAbHCMeVUf&oh=00_AYA1Z1oVo1I3ZG49DHG8TovNp2Ta2FFdrDM_LIWr2jhDcA&oe=6751F65C" alt="Profile Picture">
+        </div>
+        <h1>I am Joshua Villadiego Macaraig</h1>
+        <h2>I am a</h2>
+        <div class="text-animation">
+            <span>Digital artist.</span>
+            <span>Videographer.</span>
+            <span>Video Editor.</span>
+            <span>Traditional Artist.</span>
+            <span>Graphic Designer.</span>
+        </div>
+    </section>
+
+    <div class="more about me">
+        <div class="description">
+            <p style="text-align: justify; text-shadow: 2px 3px 10px black;">Hi! I’m Joshua Villadiego Macaraig, a digital artist, videographer, and video editor with a passion for storytelling and creating visually compelling content. 
+                Whether crafting striking digital art, producing engaging videos, or editing projects to perfection, I bring creativity, precision, and a keen eye for detail to every piece of work.
+
+                I believe in the power of visuals to inspire and connect, and I’m dedicated to helping ideas come to life in the most impactful way possible. 
+                Let’s work together to create something extraordinary!</p>
+        </div>
+    </div>
+
+    <footer>
+        <p style="padding-top: 5%; color:white;">© 2024 Macaraig. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+        
+
+        
+    

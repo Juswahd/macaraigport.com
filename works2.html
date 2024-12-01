@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiroyuki Draw</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fef6e4;
+            color: #4d2600;
+        } 
+        
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #221202;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            color: #FFF5E1; /* Light cream text color */
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: #4f2715; /* SaddleBrown */
+            color: orange; /* Light cream */
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: orange; /* Light cream */
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #8f0909; /* Bright orange */
+        }
+
+        footer {
+            background-color: #a64b2a;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-family: "Copperplate Gothic", serif;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+
+        .item {
+            width: 200px; /* Set a small fixed width for containers */
+            height: 200px; /* Set a small fixed height for containers */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .item img, .item video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the content fills the container */
+            display: block;
+        }
+
+        .item h3 {
+            text-align: center;
+            padding: 0.3px;
+            margin: 0;
+            font-family: "Arimo", sans-serif;
+            background-color: #f4a460;
+            color: #4d2600;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+            font-size: 14px;
+        }
+
+        /* Section Headers */
+        .section-header {
+            font-size: 170%;
+            font-family: "Copperplate Gothic", serif;
+            text-align: center;
+            margin-top: 2rem;
+            color: #da7d05;
+            text-shadow: 0px 2px 13px black;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) { /* Tablets and smaller laptops */
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .about {
+                margin: 30px 20px;
+                padding: 15px;
+            }
+
+            .about h1 {
+                font-size: 26px;
+            }
+
+            .about h2 {
+                font-size: 22px;
+            }
+
+            footer {
+                padding-top:14%;
+            }
+        }
+
+
+        @media (max-width: 768px) { /* Phones and smaller tablets */
+            header {
+                padding: 10px 15px;
+            }
+
+            .logo {
+                font-size: 20px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .about {
+                margin: 20px 10px;
+                padding: 10px;
+            }
+
+            .about h1 {
+                font-size: 24px;
+            }
+
+            .about h2 {
+                font-size: 20px;
+            }
+
+            .text-animation {
+                font-size: 18px;
+            }
+
+            .profile-image {
+                width: 120px;
+                height: 120px;
+            }
+
+            footer {
+                padding-top: 8%;
+            }
+        }
+
+        @media (max-width: 480px) { /* Smaller phones */
+            header {
+                padding: 8px 10px;
+            }
+
+            .logo {
+                font-size: 18px;
+            }
+
+            nav ul {
+                gap: 5px;
+            }
+
+            .about {
+                margin: 15px 5px;
+            }
+
+            .about h1 {
+                font-size: 20px;
+            }
+
+            .about h2 {
+                font-size: 18px;
+            }
+
+            .text-animation {
+                font-size: 16px;
+            }
+
+            .profile-image {
+                width: 100px;
+                height: 100px;
+            }
+
+            footer {
+                padding-top: 4%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Hiroyuki Draw</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="AboutMe1.html">About</a></li>
+                <li><a href="works2.html">Works</a></li>
+                <li><a href="Services1.html">Services</a></li>
+                <li><a href="contact.html">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Digital Artworks Section -->
+    <h2 class="section-header">Digital Artworks</h2>
+    <div class="container">
+        <div class="item">
+            <img src="https://scontent.fmnl17-6.fna.fbcdn.net/v/t39.30808-6/448640440_451031071212891_4224695360176519863_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeEdGxydBX_X6kEyxG25VW_DJfERV5haufMl8RFXmFq584NqNLXFsZnVPo-8fpGbSwxz1ALnOMFvO_Lsl872Kg8e&_nc_ohc=TP9zNkrtSBYQ7kNvgGgx2hY&_nc_zt=23&_nc_ht=scontent.fmnl17-6.fna&_nc_gid=AD0xDNBFPK30rkcJu6yVksD&oh=00_AYBkavnFiRd2LQL0ym61XFkXqjlBywQhLCTbVZHu8w8lhg&oe=6751D0DB" alt="Digital Artwork 1">
+            <h3>Digital Artwork 1</h3>
+        </div>
+        <div class="item">
+            <img src="https://scontent.fmnl17-5.fna.fbcdn.net/v/t39.30808-6/428638503_374528655529800_1462038947337465709_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeHONgub1WYLoYFnGR_bkUw4VgJXA-G1tWFWAlcD4bW1YY4MY75H6PWWukTmNczgdo7mj2tipjFbxRUS86hV-LYq&_nc_ohc=txd_WXQUTjoQ7kNvgFFZPQ2&_nc_zt=23&_nc_ht=scontent.fmnl17-5.fna&_nc_gid=AztU-28lBGe1Nj1d5mOPUnl&oh=00_AYC5lctcwLwmpb6UtTzoib-3xoj9hWrX1OqSAKdKbWQcCA&oe=6751EF9D" alt="Digital Artwork 2">
+            <h3>Digital Artwork 2</h3>
+        </div>
+        <div class="item">
+            <img src="https://scontent.fmnl17-1.fna.fbcdn.net/v/t39.30808-6/396729487_306349059014427_7376168703940188641_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeFR9CQWng0--gLwlI5QJnEWSVosi1nSqJ1JWiyLWdKonWCS9rFuGpPBUfH3D3qBuqECcuMB6ZwvZoD2_AmQ8Kum&_nc_ohc=l8FRH3DvWXAQ7kNvgGAbAWB&_nc_zt=23&_nc_ht=scontent.fmnl17-1.fna&_nc_gid=AXHmS6EKSyRqevMOXdTcu9E&oh=00_AYBQ0MghBdC_zMKtwALpnGMlxNMpLU-beirqr74OOakn5g&oe=6751EA49" alt="Digital Artwork 3">
+            <h3>Digital Artwork 3</h3>
+        </div>
+        <div class="item">
+            <img src="https://scontent.fmnl17-2.fna.fbcdn.net/v/t39.30808-6/362258795_239742605675073_4313052786355801216_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeELFjAKdYJ4NJKQQJrvrdc21x3z57mbIhjXHfPnuZsiGBNd8Z4ZF9u-uDUboevDYPkiAaYkNBW2cZYaARoVzTyj&_nc_ohc=l1iyMA-NScUQ7kNvgGCszmH&_nc_zt=23&_nc_ht=scontent.fmnl17-2.fna&_nc_gid=AtZ0zuAjZGANxue9QmbZ1Xa&oh=00_AYB-pdbyVeRE3A8mImdg7J_nnXH2xSzZLQCqt7nplbdFqw&oe=6751D252" alt="Digital Artwork 4">
+            <h3>Digital Artwork 4</h3>
+        </div>
+        <div class="item">
+            <img src="https://scontent.fmnl17-5.fna.fbcdn.net/v/t39.30808-6/358153006_230582563257744_2012175710642400260_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeFCSu1C6wtUGtvuOADAUAn9snEz32m8XXKycTPfabxdciEa2B7uWIIA4tFIAeiizVUJuud8BD-ac4eo1gao11Fm&_nc_ohc=pGFmCWSF-sIQ7kNvgH7JRTj&_nc_zt=23&_nc_ht=scontent.fmnl17-5.fna&_nc_gid=AJMhGLtBc7ZpzpyRG3XmgFm&oh=00_AYCn6QmLvns7hcfHOORtyTooXsTXSsRDsD6_5TNYuBsp6g&oe=6751DA5C" alt="Digital Artwork 5">
+            <h3>Digital Artwork 5</h3>
+        </div>
+        <div class="item">
+            <img src="https://scontent.fmnl17-4.fna.fbcdn.net/v/t39.30808-6/325914137_1849454778768367_4109484654710777960_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGpl6iie3jmB7RzLKyAYL1UwKt0mh0-W_7Aq3SaHT5b_jboJOWMTSAm69nTL27fvynFG_B87a0af4WJBvGXTAEA&_nc_ohc=0Eg9JzGMAhUQ7kNvgFtFDDw&_nc_zt=23&_nc_ht=scontent.fmnl17-4.fna&_nc_gid=AhsShqqG1zVyqar4oRkxbG0&oh=00_AYA8EXrfJxARQwAzWZT2bIDiYM3X3vHoeBl6OGCeVP2bBg&oe=675209A2" alt="Digital Artwork 6">
+            <h3>Digital Artwork 6</h3>
+        </div>
+        <div class="item">
+            <img src="https://scontent.fmnl17-1.fna.fbcdn.net/v/t39.30808-6/386161147_288272537488746_5954423454456376621_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeEfiFdPnDJTPiPaCPNQF2WrS4kgskwJ54JLiSCyTAnngsjV_Dm5homfBUFDBLAcKcP0T1Zd-wjkW43amRQRmEbZ&_nc_ohc=UKeTl5WqvdUQ7kNvgFcElTb&_nc_zt=23&_nc_ht=scontent.fmnl17-1.fna&_nc_gid=ALMAvB3p0KP9IWogZE43lK-&oh=00_AYBav-1u7DTU_is9_UoV_YVdRaqV7FDvvcRFRX6wLdq0Pw&oe=6751EE71" alt="Digital Artwork 7">
+            <h3>Digital Artwork 7</h3>
+        </div>
+        <div class="item">
+            <img src="https://scontent.fmnl17-7.fna.fbcdn.net/v/t39.30808-6/387744538_290710593911607_4895321423407744120_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeEVjDWeQPxWJ56_uySx31GZyAM9D2IVeNjIAz0PYhV42MyAunN3pdK67TxOHS0fTcQguBQxKgf8tBKA8_WlGGVB&_nc_ohc=-ekTCuh13EAQ7kNvgEtPE5y&_nc_zt=23&_nc_ht=scontent.fmnl17-7.fna&_nc_gid=AyXA0zM4P6VprYDWrmYOCFh&oh=00_AYDaCwC6bNV_dApSb9FeQjEUR5j37pC9LA4aI5XBWnUwcg&oe=675200CF" alt="Digital Artwork 8">
+            <h3>Digital Artwork 8</h3>
+        </div>
+    </div>
+
+    
+
+
+    <!-- Traditional Artworks Section -->
+    <h2 class="section-header">Traditional Artworks</h2>
+    <div class="container">
+        <div class="item">
+            <img src="https://scontent.fmnl17-1.fna.fbcdn.net/v/t39.30808-6/462121444_526670743648923_4267018837885224194_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeG1XcQGkeosD-B2LohNYhWCXm0QXUEtfClebRBdQS18KXcY8pbRYjl1nK0wW2G1VDxZ77v2VhjlPiHRDZPZUcE9&_nc_ohc=i060xnm2AacQ7kNvgH-QSF3&_nc_zt=23&_nc_ht=scontent.fmnl17-1.fna&_nc_gid=AQo1YvBUlYfNvkncz4_Bivc&oh=00_AYDBe4AXJNOkKWMqxcJjKJ1-iBgGKnaG9eV7RrhAbHTLQA&oe=6751E367" alt="Traditional Artwork 1">
+            <h3>Traditional Artwork 1</h3>
+        </div>
+        <div class="item">
+            <img src="https://scontent.fmnl17-1.fna.fbcdn.net/v/t39.30808-6/461996690_525834790399185_6339277322319061700_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeFn8L5NtmoG3RHePwx_psVcSHoskIf2oJdIeiyQh_agl8ah2jfHN0Dm7LOGykNqWIY2H6as6-VzhGd4EE8Z67rz&_nc_ohc=uYk7lA0Y6cwQ7kNvgEjCZia&_nc_zt=23&_nc_ht=scontent.fmnl17-1.fna&_nc_gid=AbFCMK-gsUa1KnftkDE_lX2&oh=00_AYCgH33a70JI1ErJeszoN9CyVWyg8islKobd4FiQiJc4ww&oe=675206AD" alt="Traditional Artwork 2">
+            <h3>Traditional Artwork 2</h3>
+        </div>
+        <div class="item">
+            <img src="https://scontent.fmnl17-1.fna.fbcdn.net/v/t39.30808-6/428646321_374527888863210_7155984251529966306_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeEaVjc1imw9eg2HT063gspW_CuPcsxczBP8K49yzFzME6w7FypK6tKOS2nth0PUx05uy8S9W20SUQOhSMsC47ao&_nc_ohc=Xqvtzn77qVYQ7kNvgH2Z_1N&_nc_zt=23&_nc_ht=scontent.fmnl17-1.fna&_nc_gid=AV2JhpTV6GcGvVJYf66g_Ed&oh=00_AYBa1edbetyT6ZyWrzfWWdh-R5PrIPzPy0y8_ydJmwWDsA&oe=6751FD91" alt="Traditional Artwork 3">
+            <h3>Traditional Artwork 3</h3>
+        </div>
+        <div class="item">
+            <img src="https://scontent.fmnl17-2.fna.fbcdn.net/v/t39.30808-6/352303267_213923438256990_6513942939562135889_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeEgg63W0RWmLce_rN7LMjFK0URVXoI97JfRRFVegj3slx3keMeNjjdjpFrCzn8NHf02sKikXRVX-dQxqSSpJ4fU&_nc_ohc=cHrPD0kM-V8Q7kNvgFlPMTu&_nc_zt=23&_nc_ht=scontent.fmnl17-2.fna&_nc_gid=AjJHJbGFatmN6y3W9a0FANZ&oh=00_AYCFeF-nnBXsAsg7ttjKXp8Mjo_u_h-geP4RrAj1RLmR3g&oe=6752087F" alt="Traditional Artwork 4">
+            <h3>Traditional Artwork 4</h3>
+        </div>
+        <div class="item">
+            <img src="https://scontent.fmnl17-7.fna.fbcdn.net/v/t39.30808-6/354591068_217973494518651_2839521053012335713_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeG5qSUZgIYmFn87C4w62IR0nBVJXyR1SNucFUlfJHVI2-zSU1-zitNBNcMMKWVGYWFx5fT0iAtjfxXwsQcUrPuX&_nc_ohc=oozm-WAEnk4Q7kNvgH9ncDZ&_nc_zt=23&_nc_ht=scontent.fmnl17-7.fna&_nc_gid=ARChBpOEbrPUpHZMrOXAeDo&oh=00_AYAI-9wNH45RUyjHXXKYyIqOsEBW1NVR9bdJpGf_c6yTVw&oe=6751F337" alt="Traditional Artwork 5">
+            <h3>Traditional Artwork 5</h3>
+        </div>
+    </div>
+
+    <!-- Films Section -->
+    <h2 class="section-header">Films</h2>
+    <div class="container">
+        <div class="item">
+            <video controls>
+                <source src="Dear Me, - Teaser 2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h3>Film 1</h3>
+        </div>
+        <div class="item">
+            <video controls>
+                <source src="Signus-Teaser.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h3>Film 2</h3>
+        </div>
+        <div class="item">
+            <video controls>
+                <source src="Kabilang_Buhay.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h3>Film 3</h3>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Hiroyuki Draw. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+
+<script>
+    // JavaScript for handling multiple lightbox images dynamically
+    document.querySelectorAll('.item img').forEach(img => {
+        img.addEventListener('click', () => {
+            const lightbox = document.createElement('div');
+            lightbox.id = 'lightbox';
+            lightbox.style.position = 'fixed';
+            lightbox.style.top = 0;
+            lightbox.style.left = 0;
+            lightbox.style.width = '100%';
+            lightbox.style.height = '100%';
+            lightbox.style.background = 'rgba(0, 0, 0, 0.8)';
+            lightbox.style.display = 'flex';
+            lightbox.style.justifyContent = 'center';
+            lightbox.style.alignItems = 'center';
+            lightbox.style.zIndex = '1000';
+            lightbox.addEventListener('click', () => {
+                lightbox.remove();
+            });
+
+            const imgClone = document.createElement('img');
+            imgClone.src = img.src;
+            imgClone.style.maxWidth = '90%';
+            imgClone.style.maxHeight = '90%';
+            imgClone.style.border = '4px solid white';
+            imgClone.style.borderRadius = '8px';
+
+            lightbox.appendChild(imgClone);
+            document.body.appendChild(lightbox);
+        });
+    });
+</script>

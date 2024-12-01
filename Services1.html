@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Hiroyuki Draw</title>
+    
+
+    <style>
+         /* styles.css */
+
+/* General Reset */
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #221202;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            color: #c4c4c4; /* Light cream text color */
+            line-height: 1.6;
+            text-shadow: 0px 3px 17px black;
+        }
+/* Header */
+header {
+            background-color: #4f2715; /* SaddleBrown */
+            color: orange; /* Light cream */
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: orange; /* Light cream */
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #8f0909; /* Bright orange */
+        }
+
+
+main {
+    max-width: 1200px;
+    margin: 2em auto;
+    padding: 0 20px;
+}
+
+h1, h2 {
+    color: #ce7713;
+    text-shadow: 0px 3px 13px black;
+}
+
+section {
+    background-color: rgb(109, 70, 19);
+    margin-bottom: 2em;
+    padding: 2em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 1em;
+}
+
+a {
+    color: #ff8800;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #552a07;
+    color: orange;
+    text-align: center;
+    padding: 1em 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) { /* Tablets and smaller laptops */
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .about {
+                margin: 30px 20px;
+                padding: 15px;
+            }
+
+            .about h1 {
+                font-size: 26px;
+            }
+
+            .about h2 {
+                font-size: 22px;
+            }
+
+            footer {
+                padding-top:14%;
+            }
+        }
+
+
+        @media (max-width: 768px) { /* Phones and smaller tablets */
+            header {
+                padding: 10px 15px;
+            }
+
+            .logo {
+                font-size: 20px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .about {
+                margin: 20px 10px;
+                padding: 10px;
+            }
+
+            .about h1 {
+                font-size: 24px;
+            }
+
+            .about h2 {
+                font-size: 20px;
+            }
+
+            .text-animation {
+                font-size: 18px;
+            }
+
+            .profile-image {
+                width: 120px;
+                height: 120px;
+            }
+
+            footer {
+                padding-top: 8%;
+            }
+        }
+
+        @media (max-width: 480px) { /* Smaller phones */
+            header {
+                padding: 8px 10px;
+            }
+
+            .logo {
+                font-size: 18px;
+            }
+
+            nav ul {
+                gap: 5px;
+            }
+
+            .about {
+                margin: 15px 5px;
+            }
+
+            .about h1 {
+                font-size: 20px;
+            }
+
+            .about h2 {
+                font-size: 18px;
+            }
+
+            .text-animation {
+                font-size: 16px;
+            }
+
+            .profile-image {
+                width: 100px;
+                height: 100px;
+            }
+
+            footer {
+                padding-top: 4%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Hiroyuki Draw</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="AboutMe1.html">About Me</a></li>
+                <li><a href="works2.html">Works</a></li>
+                <li><a href="Services1.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="services-intro">
+            <h1>Services</h1>
+            <p>Welcome to the <strong>Hiroyuki Draw Services</strong> page. Whether you're looking for captivating visuals, engaging videos, or professional editing, you've come to the right place. Here's how I can bring your vision to life:</p>
+        </section>
+
+        <section id="digital-art">
+            <h2>Digital Art</h2>
+            <p>Bring your imagination to reality with unique and custom illustrations.</p>
+            <ul>
+                <li><strong>Character Design:</strong> Personalized characters for branding, storytelling, or gaming.</li>
+                <li><strong>Concept Art:</strong> High-quality concepts for books, films, or other projects.</li>
+                <li><strong>Commission Work:</strong> Tailored art pieces to suit your specific needs.</li>
+            </ul>
+        </section>
+
+        <section id="traditional-art">
+            <h2>Traditional Art</h2><br>
+            <p>Experience the beauty and depth of handcrafted art.</p><br>
+            <ul>
+                <li><strong>Mixed Media Art:</strong> Combine various materials and techniques, using realistic color blending to bring a unique depth and richness to each piece.</li>
+                <li><strong>Art Prints:</strong> High-quality prints of your favorite traditional artworks, showcasing the beauty of color blending and detail.</li>
+            </ul>
+        </section>
+
+        <section id="videography">
+            <h2>Videography</h2>
+            <p>Transform your ideas into visually stunning productions.</p>
+            <ul>
+                <li><strong>Filming Stories:</strong> Capture the essence of your story through cinematic visuals and compelling narratives.</li>
+                <li><strong>Creative Shoots:</strong> Music videos, short films, or creative campaigns.</li>
+                <li><strong>Brand Storytelling:</strong> Build your narrative with engaging visuals for businesses or personal brands.</li>
+            </ul>
+        </section>
+
+        <section id="video-editing">
+            <h2>Video Editing</h2>
+            <p>Add finesse and polish to your video content.</p>
+            <ul>
+                <li><strong>Post-Production Editing:</strong> Seamless transitions, color grading, and dynamic effects.</li>
+                <li><strong>Motion Graphics:</strong> Animated titles, lower thirds, and overlays for a professional finish.</li>
+                <li><strong>Content Editing:</strong> YouTube videos, vlogs, tutorials, and more.</li>
+                <li><strong>Audio Syncing:</strong> Ensure that your visuals and soundtracks are perfectly aligned.</li>
+            </ul>
+        </section>
+
+        <section id="why-choose">
+            <h2>Why Choose Me?</h2>
+            <ul>
+                <li><strong>Attention to Detail:</strong> Every project receives precise and professional care.</li>
+                <li><strong>Timely Delivery:</strong> Quality work delivered within the agreed timeline.</li>
+                <li><strong>Versatility:</strong>From intricate digital illustrations to cinematic video production, I offer a broad range of services to suit various creative needs.</li>
+                <li><strong>Client Satisfaction</strong>Your satisfaction is my priority. I strive to exceed expectations with every project, ensuring you’re thrilled with the final result.</li>
+            </ul>
+        </section>
+
+        <section id="call-to-action">
+            <h2>Let’s Collaborate!</h2>
+            <p>Ready to start your project? Feel free to <a href="contact.html">get in touch</a> today. Together, we’ll create something extraordinary.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Hiroyuki Draw. All rights reserved.</p>
+    </footer>
+</body>
+</html>

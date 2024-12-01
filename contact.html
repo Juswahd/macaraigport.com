@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Hiroyuki Draw</title>
+    <style>
+       /* General Reset */
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #221202;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            color: #c4c4c4; /* Light cream text color */
+            line-height: 1.6;
+            text-shadow: 0px 3px 17px black;
+        }
+        
+        /* Header */
+        header {
+            background-color: #4f2715; /* SaddleBrown */
+            color: orange; /* Light cream */
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: orange; /* Light cream */
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #8f0909; /* Bright orange */
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        h2 {
+            color: orange;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .contact-info a {
+            color: orange;
+            text-shadow: 0px 3px 12px rgb(85, 85, 85);
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .contact-info span {
+            font-weight: bold;
+        }
+        footer {
+            position:relative;
+            top: 300px;
+            color: white;
+            padding: 10px;
+            text-align:center;
+            margin-top: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) { /* Tablets and smaller laptops */
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .about {
+                margin: 30px 20px;
+                padding: 15px;
+            }
+
+            .about h1 {
+                font-size: 26px;
+            }
+
+            .about h2 {
+                font-size: 22px;
+            }
+
+            footer {
+                padding-top:14%;
+            }
+        }
+
+
+        @media (max-width: 768px) { /* Phones and smaller tablets */
+            header {
+                padding: 10px 15px;
+            }
+
+            .logo {
+                font-size: 20px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .about {
+                margin: 20px 10px;
+                padding: 10px;
+            }
+
+            .about h1 {
+                font-size: 24px;
+            }
+
+            .about h2 {
+                font-size: 20px;
+            }
+
+            .text-animation {
+                font-size: 18px;
+            }
+
+            .profile-image {
+                width: 120px;
+                height: 120px;
+            }
+
+            footer {
+                padding-top: 8%;
+            }
+        }
+
+        @media (max-width: 480px) { /* Smaller phones */
+            header {
+                padding: 8px 10px;
+            }
+
+            .logo {
+                font-size: 18px;
+            }
+
+            nav ul {
+                gap: 5px;
+            }
+
+            .about {
+                margin: 15px 5px;
+            }
+
+            .about h1 {
+                font-size: 20px;
+            }
+
+            .about h2 {
+                font-size: 18px;
+            }
+
+            .text-animation {
+                font-size: 16px;
+            }
+
+            .profile-image {
+                width: 100px;
+                height: 100px;
+            }
+
+            footer {
+                padding-top: 4%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">Hiroyuki Draw</div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="AboutMe1.html">About</a></li>
+            <li><a href="works2.html">Works</a></li>
+            <li><a href="Services1.html">Services</a></li>
+            <li><a href="contact.html">Contacts</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <h2>Thank you for visiting Hiroyuki Draw!</h2>
+    <p>If you’d like to get in touch with me for commissions, collaborations, or just to chat, you can reach me through any of the following platforms:</p>
+
+    <div class="contact-info">
+        <p><span>Email:</span> <a href="mcakes136@gmail.com">mcakes136@gmail.com</a></p>
+
+        <p><span>Social Media:</span></p>
+        <ul>
+            <li><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fjoshuamaclsei%2Fprofilecard%2F%3Figsh%3DMWQzd2JvMXI3OHVtbw%253D%253D%26fbclid%3DIwZXh0bgNhZW0CMTAAAR1MLIfJ2RtNDpLLx2k7gC-0Oy1jfWnrZ3ijO203kVHTCiGijgN3hEZ8_ro_aem_qFUHmT_c4xPqVDwAy5VgJg&h=AT0PPbLFEHnz5I_6MScN94obelDlUVEThtE6L57cGejBanD6MdiqTlRjCl_amEj8cG14WkT03GqcZqwsL-i_hb6VIa1r-d3xo7rwFBkEABDNkFXhKDYu0geZPPyPLzkZ-u_Bb4s3jos3qzs" target="_blank">Instagram: @hiro_yuki_draw</a></li>
+
+            <li><a href="https://www.facebook.com/profile.php?id=100089180053360" target="_blank">Facebook: Hiroyuki Draw</a></li>
+        </ul>
+
+        <p><span>YouTube:</span> <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fyoutube.com%2F%40joshuamac8555%3Fsi%3DFZsU0v1o6IxM_3Ms%26fbclid%3DIwZXh0bgNhZW0CMTAAAR1GSBKZbqjupnbQjAIuQgV9z0A9rw29ql4cge2ubpmF0vUV5QFw1SEjG78_aem_iwW6q436tJkYKKtwrjCofw&h=AT0a1OD0RND38bqhKiIORnKeWgIZrBKlxQI4NOyB9pVO5Cn7lnVx7MiQHnTDv-aHJQdMcZ9wfPjDzEnux7zVMLoDnCY5Kjz5YS-Y6Hnk9bmqGzOsyJCeS456qo2EH_YZltSEXg" target="_blank">Hiroyuki Draw</a></p>
+
+        <p><span>Other Platforms:</span></p>
+        <ul>
+            <li><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.tiktok.com%2F%40aldri.098%3F_t%3D8rqqEJnrN4h%26_r%3D1%26fbclid%3DIwZXh0bgNhZW0CMTAAAR2kjg4iYc1ldFA8GPrIjJ3wRSwknPXopf3kWXrQ_ZVbJP-AwZrwNZRaV5k_aem_Nvr99arSaGA1kpucOt3uLQ&h=AT0a1OD0RND38bqhKiIORnKeWgIZrBKlxQI4NOyB9pVO5Cn7lnVx7MiQHnTDv-aHJQdMcZ9wfPjDzEnux7zVMLoDnCY5Kjz5YS-Y6Hnk9bmqGzOsyJCeS456qo2EH_YZltSEXg" target="_blank">TikTok: @hiro.draw69</a></li>
+
+        </ul>
+
+        <p>If you're interested in collaborating or have any inquiries, feel free to reach out! I look forward to connecting with you.</p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Hiroyuki Draw. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

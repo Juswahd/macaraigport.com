@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    
+    <meta charset="UTF-8">
+    <style>
+        /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(https://i.pinimg.com/736x/57/ad/c7/57adc7649d38faa457923042f0c0edfc.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #24170a;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+
+/* Image Grid - Full Width */
+.image-grid {
+    display: flex;
+    gap: 0; /* No spaces between items */
+    width: 100%; /* Full width */
+    justify-content: space-between; /* Ensure boxes touch both edges */
+}
+
+.grid-item {
+    flex-grow: 1; /* Makes each box expand equally */
+    height: 150px;
+    background-color: #ffaa66;
+    border-radius: 5px;
+}
+
+.grid-item img{
+    flex-grow: 1; /* Makes each box expand equally */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+/* Header */
+.header {
+    background-color: #38210a;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: orange;
+    margin-bottom: 15px;
+}
+
+/* Main Content */
+.main {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.main h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 7rem;
+    font-weight: bold;
+    color: #442a0f;
+    text-shadow: 3px 15px 25px rgb(174, 121, 22);
+    position: relative;
+    text-align: center;
+    padding-bottom: 5%;
+}
+
+/* Continue Button */
+.continue-btn {
+    position: absolute;
+    bottom: 95px;
+    right: 170px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    background-color: #cc6600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.continue-btn:hover {
+    background-color: #993300;
+}
+
+
+ /* Footer Styles */
+    .footer  p{ 
+        padding: 20px;
+        text-align: center;
+        font-family: 'Arimo', sans-serif;
+        color: #fbfbfb;
+        font-size: 13px;
+        text-shadow: 2px 5px 10px rgba(183, 183, 183, 0.726);
+        line-height: 230%;
+    }
+
+/* Responsive Design */
+
+/* For Tablets */
+@media (max-width: 1024px) {
+    .grid-item {
+        height: 50px;
+    }
+
+    .main h2 {
+        font-size: 2.5rem;
+    }
+
+    .continue-btn {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
+
+/* For Phones */
+@media (max-width: 768px) {
+    .grid-item {
+        height: 40px;
+    }
+
+    .main h2 {
+        font-size: 2rem;
+    }
+
+    .continue-btn {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+}
+
+/* For Small Phones */
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    .grid-item {
+        height: 30px;
+    }
+
+    .main h2 {
+        font-size: 1.8rem;
+    }
+
+    .continue-btn {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+}
+
+    </style>
+</head>
+<body style="margin-bottom: 55px !important;"><div style="position: fixed !important; bottom: 0% !important; width: 100% !important; height: 55px !important; z-index: 9999 !important;"><a href="https://tiiny.host?ref=free-site">
+    <div style="padding: 10px !important; background: rgb(220,137,232) !important;
+background: linear-gradient(141deg, rgba(220,137,232,1) 0%, rgba(144,64,204,1) 100%) !important; height: 55px; text-align: center">
+      <img style="height: 35px !important; width: auto !important;" src="https://tiiny.host/assets/img/ad.png" alt="tiiny.host">
+    </div>
+  </a></div>
+    <header class="header">
+        <div class="logo">
+            <h1>Hiroyuki Draw</h1>
+        </div>
+        <div class="image-grid">
+            <div class="grid-item"> 
+                <img src="https://scontent.fmnl16-1.fna.fbcdn.net/v/t39.30808-6/362258795_239742605675073_4313052786355801216_n.jpg?_nc_cat=107&amp;ccb=1-7&amp;_nc_sid=f727a1&amp;_nc_ohc=l1iyMA-NScUQ7kNvgH7pRC7&amp;_nc_zt=23&amp;_nc_ht=scontent.fmnl16-1.fna&amp;_nc_gid=A4qRCtdYaR_Mg5hWAR15-Kz&amp;oh=00_AYCjdojwVOvS0AT78aWj3m9kgm5D_1CMf6I4DZziAs7KEQ&amp;oe=674F6792" alt="one image">
+            </div>
+            <div class="grid-item">
+                <img src="https://scontent.fmnl16-1.fna.fbcdn.net/v/t39.30808-6/396729487_306349059014427_7376168703940188641_n.jpg?_nc_cat=101&amp;ccb=1-7&amp;_nc_sid=f727a1&amp;_nc_ohc=ucEl8WO_scIQ7kNvgF6PmzU&amp;_nc_zt=23&amp;_nc_ht=scontent.fmnl16-1.fna&amp;_nc_gid=AfqXcNKYFSYcaxfLyhqwGgb&amp;oh=00_AYArfiWV1S2fKtxWQ7ylMDG3TFRho4EpWylt8xNwMyk1OA&amp;oe=674F7F89">
+            </div>
+            <div class="grid-item">
+                <img src="https://scontent.fmnl16-1.fna.fbcdn.net/v/t39.30808-6/379330263_276867811962552_3755353094348534077_n.jpg?_nc_cat=107&amp;ccb=1-7&amp;_nc_sid=f727a1&amp;_nc_ohc=KGyFrk04idYQ7kNvgFijW05&amp;_nc_zt=23&amp;_nc_ht=scontent.fmnl16-1.fna&amp;_nc_gid=AQrwTgBUabLDe8BmaQIQFG6&amp;oh=00_AYB2ydtfQyX42Jy9V9DQUasY69FYZrNU25jWcbccsrYzJg&amp;oe=674F6BE3">
+            </div>
+            <div class="grid-item">
+                <img src="https://scontent.fmnl16-1.fna.fbcdn.net/v/t39.30808-6/361632321_239145392401461_1630967430793902777_n.jpg?_nc_cat=109&amp;ccb=1-7&amp;_nc_sid=f727a1&amp;_nc_ohc=hPMy6QO0-UUQ7kNvgG7ySyY&amp;_nc_zt=23&amp;_nc_ht=scontent.fmnl16-1.fna&amp;_nc_gid=A4p-Aug9i_1ifhRudVl1_UY&amp;oh=00_AYBRQyyU1wYQjLEMQtlI1lhaBHgbWT4aXn8ix3Tgl-cjGg&amp;oe=674F5A24">
+            </div>
+            <div class="grid-item">
+                <img src="https://scontent.fmnl16-1.fna.fbcdn.net/v/t39.30808-6/358153006_230582563257744_2012175710642400260_n.jpg?_nc_cat=110&amp;ccb=1-7&amp;_nc_sid=f727a1&amp;_nc_ohc=pGFmCWSF-sIQ7kNvgFWqMaa&amp;_nc_zt=23&amp;_nc_ht=scontent.fmnl16-1.fna&amp;_nc_gid=AmgJzaKQCJp_MTf6KgpuG1A&amp;oh=00_AYCBlhZQZ7CuHAWrFSt_FAuJYqycC35WlzoT-j3lGw68_w&amp;oe=674F6F9C">
+            </div>
+            <div class="grid-item">
+                <img src="https://scontent.fmnl16-1.fna.fbcdn.net/v/t39.30808-6/421616485_358645943784738_6509219215273054710_n.jpg?_nc_cat=111&amp;ccb=1-7&amp;_nc_sid=f727a1&amp;_nc_ohc=PFkXE19kDrcQ7kNvgGhQcx5&amp;_nc_zt=23&amp;_nc_ht=scontent.fmnl16-1.fna&amp;_nc_gid=AUQ8KAvDlvNnKXww9mv0o36&amp;oh=00_AYBcTeMHyAhmOwrXA_O9gUvqRa7AeUYgAtSch3HNAoer8Q&amp;oe=674F73F6">
+            </div>
+            <div class="grid-item">
+                <img src="https://scontent.fmnl16-1.fna.fbcdn.net/v/t39.30808-6/378831966_274294495553217_4074752767485334525_n.jpg?_nc_cat=105&amp;ccb=1-7&amp;_nc_sid=f727a1&amp;_nc_ohc=0wBeAoQuyeYQ7kNvgG1MY4S&amp;_nc_zt=23&amp;_nc_ht=scontent.fmnl16-1.fna&amp;_nc_gid=A-61YZ2lV_0fZ44UKMWR6wF&amp;oh=00_AYCSGgjmW7K6fQj6eUxvACEZDUjTJtfc6HFPgIdz-COC3A&amp;oe=674F57B3">
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <h2>PORTFOLIO</h2>
+    </main>
+
+    <a href="AboutMe1.html" button="" class="continue-btn">Continue</a>
+
+    <footer>
+        <p style="padding: 20px; color:white;">© 2024 Macaraig. All Rights Reserved.</p>
+    </footer>
+
+
+</body>
+</html>
